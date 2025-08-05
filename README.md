@@ -32,21 +32,21 @@
 
 ### 🔐 Sign In & Sign Up
 <p float="left">
-  <img src="screenshots/sign-in.jpg" width="200"/> 
-  <img src="screenshots/sign-up.jpg" width="200"/>
+  <img src="Prattle files/screenshots/Sign-in-page.jpg" width="200"/> 
+  <img src="Prattle files/screenshots/Sign-up-page.jpg" width="200"/>
 </p>
 
 ### 🏠 Home (Chat List)
-<img src="screenshots/home.jpg" width="200"/>
+<img src="Prattle files/screenshots/Home-page.jpg" width="200"/>
 
 ### 💬 Chat Interface
-<img src="screenshots/chat-interface.jpg" width="200"/>
+<img src="Prattle files/screenshots/Chatting-Interface.jpg" width="200"/>
 
 ### 📖 Stories Section
-<img src="screenshots/stories.jpg" width="200"/>
+<img src="Prattle files/screenshots/Stories-page.jpg" width="200"/>
 
 ### 👤 Profile Page
-<img src="screenshots/profile.jpg" width="200"/>
+<img src="Prattle files/screenshots/Profile-page.jpg" width="200"/>
 
 ---
 
@@ -67,3 +67,59 @@
    ```bash
    git clone https://github.com/your-username/prattle.git
    cd prattle
+
+2. 📝 Note: Replace values with your actual `google-services.json` by downloading it from Firebase Console and placing it in the `/app` directory.
+
+✅ **Firebase Realtime Database Rules (for testing):**
+
+```json
+{
+  "rules": {
+    ".read": "true",
+    ".write": "true"
+  }
+}
+```
+
+✅ Firebase Storage Rules (for development)
+```
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      allow read, write;
+    }
+  }
+}
+```
+
+✅ Structure of google-services.json 
+```json
+
+{
+  "project_info": {
+    "project_id": "your-firebase-project-id",
+    "project_number": "1234567890",
+    "name": "Prattle"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1234567890:android:abcdef123456",
+        "android_client_info": {
+          "package_name": "com.yourcompany.prattle"
+        }
+      }
+    }
+  ]
+}
+```
+
+
+👨‍💻 Developer
+
+Name: Arpan Khare
+
+📧 Email: kharearpan7777@gmail.com
+
+📞 Phone: +91 6306462328
+
